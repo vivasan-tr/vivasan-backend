@@ -21,6 +21,24 @@ module.exports = defineConfig({
   },
     modules: [
       {
+      resolve: "@medusajs/medusa/file",
+      options: {
+        providers: [
+          {
+            resolve: "@ridoy_sarker/medusa-cloudinary/providers/cloudinary",
+            id: "cloudinary",
+            options: {
+              apiKey: process.env.CLOUDINARY_API_KEY,
+              apiSecret: process.env.CLOUDINARY_API_SECRET,
+              cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+              folderName: process.env.CLOUDINARY_FOLDER_NAME, // Optional: Folder name in Cloudinary
+              secure: true, // Optional: Use HTTPS (default: true)
+            },
+          },
+        ],
+      },
+    },
+      {
       resolve: "@medusajs/medusa/cache-redis",
       options: {
         redisUrl: process.env.REDIS_URL,
