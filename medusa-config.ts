@@ -20,7 +20,7 @@ module.exports = defineConfig({
     backendUrl: process.env.MEDUSA_BACKEND_URL,
   },
     modules: [
-          {
+      {
       key: Modules.FILE,
       resolve: '@medusajs/file',
       options: {
