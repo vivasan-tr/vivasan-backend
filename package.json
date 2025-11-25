@@ -26,10 +26,11 @@
     "@medusajs/admin-sdk": "2.11.3",
     "@medusajs/admin-shared": "2.11.3",
     "@medusajs/cli": "2.11.3",
+    "@medusajs/dashboard": "2.11.3",
+    "@medusajs/draft-order": "2.11.3",
     "@medusajs/framework": "2.11.3",
     "@medusajs/medusa": "2.11.3",
-    "@medusajs/dashboard": "2.11.3",
-    "@medusajs/draft-order": "2.11.3"
+    "@tsc_tech/medusa-plugin-cloudinary": "1.0.0"
   },
   "devDependencies": {
     "@medusajs/test-utils": "2.11.3",
@@ -48,9 +49,8 @@
     "vite": "^5.4.14",
     "yalc": "^1.0.0-pre.53"
   },
-  "packageManager": "pnpm@9.10.0",
+  "packageManager": "pnpm@latest-10",
   "engines": {
-    "node": "22.x",
-    "npm": "10.x"
+    "node": ">=20"
   }
 }
