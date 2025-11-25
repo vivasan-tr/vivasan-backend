@@ -21,24 +21,6 @@ module.exports = defineConfig({
   },
     modules: [
       {
-  resolve: "@medusajs/medusa/file",
-  options: {
-    providers: [
-      {
-        resolve: "@tsc_tech/medusa-plugin-cloudinary/providers/file-cloudinary",
-        id: "cloudinary",
-        options: {
-          apiKey: process.env.CLOUDINARY_API_KEY,
-          apiSecret: process.env.CLOUDINARY_API_SECRET,
-          cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-          folderName: "vivasan", // optional, defaults to root
-          secure: true,         // optional, defaults to true
-        },
-      },
-    ],
-  },
-},
-    {
       resolve: "@medusajs/medusa/cache-redis",
       options: {
         redisUrl: process.env.REDIS_URL,
