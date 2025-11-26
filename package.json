@@ -31,8 +31,7 @@
     "@medusajs/framework": "2.11.3",
     "@medusajs/medusa": "2.11.3",
     "@medusajs/icons":"2.11.3",
-    "@medusajs/ui":"4.0.27",
-    "@ridoy_sarker/medusa-cloudinary":"2.0.0"
+    "@medusajs/ui":"4.0.27"
   },
   "devDependencies": {
     "@medusajs/test-utils": "2.11.3",

@@ -25,16 +25,22 @@ module.exports = defineConfig({
       options: {
         providers: [
           {
-            resolve: "@ridoy_sarker/medusa-cloudinary/providers/cloudinary",
-            id: "cloudinary",
+            resolve: "@medusajs/medusa/file-s3",
+            id: "s3",
             options: {
-              apiKey: process.env.CLOUDINARY_API_KEY,
-              apiSecret: process.env.CLOUDINARY_API_SECRET,
-              cloudName: process.env.CLOUDINARY_CLOUD_NAME,
-              folderName: process.env.CLOUDINARY_FOLDER_NAME, // Optional: Folder name in Cloudinary
-              secure: true, // Optional: Use HTTPS (default: true)
+              file_url: process.env.S3_FILE_URL,
+              access_key_id: process.env.S3_ACCESS_KEY_ID,
+              secret_access_key: process.env.S3_SECRET_ACCESS_KEY,
+              region: process.env.S3_REGION,
+              bucket: process.env.S3_BUCKET,
+              endpoint: process.env.S3_ENDPOINT,
+              options: {
+              additional_client_config: {
+                forcePathStyle: true,
+              },
             },
           },
+        },
         ],
       },
     },
