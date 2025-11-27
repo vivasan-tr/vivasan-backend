@@ -15,23 +15,17 @@
   "scripts": {
     "build": "medusa build",
     "seed": "medusa exec ./src/scripts/seed.ts",
-    "start": "medusa start",
+    "start": "npm run build && medusa migrations run && medusa start",
     "dev": "medusa develop",
-    "predeploy": "medusa db:migrate",
     "test:integration:http": "TEST_TYPE=integration:http NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:integration:modules": "TEST_TYPE=integration:modules NODE_OPTIONS=--experimental-vm-modules jest --silent=false --runInBand --forceExit",
     "test:unit": "TEST_TYPE=unit NODE_OPTIONS=--experimental-vm-modules jest --silent --runInBand --forceExit"
   },
   "dependencies": {
     "@medusajs/admin-sdk": "2.11.3",
-    "@medusajs/admin-shared": "2.11.3",
     "@medusajs/cli": "2.11.3",
-    "@medusajs/dashboard": "2.11.3",
-    "@medusajs/draft-order": "2.11.3",
     "@medusajs/framework": "2.11.3",
-    "@medusajs/medusa": "2.11.3",
-    "@medusajs/icons":"2.11.3",
-    "@medusajs/ui":"4.0.27"
+    "@medusajs/medusa": "2.11.3"
   },
   "devDependencies": {
     "@medusajs/test-utils": "2.11.3",
@@ -50,8 +44,7 @@
     "vite": "^5.4.14",
     "yalc": "^1.0.0-pre.53"
   },
-  "packageManager": "pnpm@10.23.0",
   "engines": {
-    "node": ">=22"
+    "node": ">=20"
   }
 }
