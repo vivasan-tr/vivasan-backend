@@ -45,7 +45,7 @@ COPY --from=builder /app/medusa/.medusa ./.medusa
 
 WORKDIR /app/medusa/.medusa/server
 
-RUN yarn install --production
+RUN yarn install --production --network-timeout 300000
 
 
 # RUN medusa migrations run 
